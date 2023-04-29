@@ -23,4 +23,3 @@ If you find any issues with this project or would like to contribute to its deve
 ## License
 
 This project is licensed under the MIT License.
-
