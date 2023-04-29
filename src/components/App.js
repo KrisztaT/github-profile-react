@@ -32,30 +32,31 @@ class App extends React.Component {
     query as a parameter using fetch and await. If the user is found, it sets the user state to the response data.
     If the user is not found, it throws an error. The try-catch block is used to handle any
     errors that may occur during the API request. */
-    try {
+    
       const usrResponse = await fetch(API_URL + this.state.searchUser);
       const user = await usrResponse.json()
-      if (user.message === "Not Found") {
-        throw new Error("User can not be found");
-      } else {
+     /*  /* if (user.message === "Not Found") {
+        throw new Error("User can not be found"); 
+      } else */ 
         this.setState({ user });
-      }
-    } catch (error) {
-      alert(error);
-    }
+    
       
     /* This code is sending a GET request to the GitHub API to retrieve the repositories of the user
     specified in the search query. It uses the `fetch` function to send the request and `await` to
     wait for the response. If the request is successful, it sets the `repos` state to the response
     data. If there is an error during the API request, it logs the error to the console. The
     `try-catch` block is used to handle any errors that may occur during the API request. */
-    try {
+  
       const repoResponse = await fetch(API_URL + this.state.searchUser + "/repos?sort=created");
       const repos = await repoResponse.json();
-      this.setState({ repos });
-    } catch (error) {
-      console.log(error);
-    }
+      
+      if (Array.isArray(repos)) {
+        this.setState({ repos });
+      } else {
+        console.error('Error fetching repos:', repos);
+        this.setState([]);
+      }
+    
   };
 
   /* `setSearchUser` is a function that is used to update the `searchUser` property in the component's
