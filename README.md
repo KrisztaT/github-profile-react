@@ -2,7 +2,11 @@
 
 This React application was developed by utilising my [GitHub Profile Search](https://github.com/KrisztaT/small_projects/tree/main/github_profiles) web app which was built in HTML, CSS and JavaScript. Profile Search app allows users to search for and view information about GitHub users and their public repositories.
 
-Features:
+## Demo
+
+Check out the deployed app at https://wonderful-granita-f625d7.netlify.app/
+
+## Features
 
 * User search: Users can enter a GitHub username to search for and view information about a particular user.
 * User data display: The application displays the user's avatar, name, bio, and follower/following count, as well as the number of public repositories the user has.
