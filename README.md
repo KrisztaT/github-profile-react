@@ -16,7 +16,7 @@ Check out the deployed app at https://wonderful-granita-f625d7.netlify.app/
 | --- | --- |
 | ![User Search](./public/Screenshot_desktop.png) | ![User Search Mobile](./public/Screenshot_mobile.png) |
 
-Note: In case running the application is slow, please consider to remove the following 'WATCHPACK_POLLING=true' from the package.json file.
+Note: In case running the application with `npm start` is slow, please consider to remove the following `WATCHPACK_POLLING=true` from the `package.json` file.
 
 ## Contributing
 

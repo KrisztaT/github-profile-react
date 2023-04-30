@@ -21,13 +21,13 @@ const Profile = ({ user, repos }) => {
                 </div>
             </div> 
         )}
-        
         <div className="repos">
-          {repos.map((repo) => (
-              <a href={repo.html_url}>{repo.name}, </a>
-          ))}
+            {repos.map((repo) => (
+                <a href={repo.html_url}>{repo.name}, </a>
+            ))}
+          </div>
         </div>
-      </div>
+      
     );
   };
   
