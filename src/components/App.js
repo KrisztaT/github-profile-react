@@ -26,7 +26,7 @@ class App extends React.Component {
 
       /* It first checks if there is a
       search query entered by the user, and if not, it returns without doing anything.*/
-      if (!this.state.searchUser) return this.setState({ user : null }); 
+      if (!this.state.searchUser) return; 
 
       /*If there is a search query, the code sends a GET request to the GitHub API using the search
       query as a parameter using fetch and await. If the user is found, it sets the user state to the response data.
@@ -34,8 +34,14 @@ class App extends React.Component {
       const usrResponse = await fetch(API_URL + this.state.searchUser);
       const user = await usrResponse.json()
 
-      if (user.message === 'Not Found') {this.setState({ user: null })}
-      else{this.setState({ user })}
+      /* This code is checking if the response from the GitHub API contains a `message` property with
+      the value of `'Not Found'`. If it does, it means that the user specified in the search query
+      was not found, so it sets the `user` state to `null` and displays an alert message to the
+      user. If the user is found, it sets the `user` state to the response data. */
+      if (user.message === 'Not Found') {
+        this.setState({ user: null })
+        alert('User not found');
+      }else{this.setState({ user })}
     
       
       /* This code is sending a GET request to the GitHub API to retrieve the repositories of the user

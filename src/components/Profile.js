@@ -27,7 +27,6 @@ const Profile = ({ user, repos }) => {
             ))}
           </div>
         </div>
-      
     );
   };
   
