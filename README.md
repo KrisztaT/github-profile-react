@@ -16,9 +16,7 @@ Check out the deployed app at https://wonderful-granita-f625d7.netlify.app/
 | --- | --- |
 | ![User Search](./public/Screenshot_desktop.png) | ![User Search Mobile](./public/Screenshot_mobile.png) |
 
-## Getting Started
-
-To use this application, simply clone the repository to your local machine and open the index.html file in your web browser. You will need an internet connection to use the application, as it fetches data from the GitHub API.
+Note: In case running the application is slow, please consider to remove the following 'WATCHPACK_POLLING=true' from the package.json file.
 
 ## Contributing
 
