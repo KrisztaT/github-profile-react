@@ -54,7 +54,7 @@ class App extends React.Component {
         this.setState({ repos });
       } else {
         console.error('Error fetching repos:', repos);
-        this.setState([]);
+        this.setState({ repos: [] });
       }
     
   };
