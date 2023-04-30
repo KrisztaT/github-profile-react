@@ -23,6 +23,7 @@ class App extends React.Component {
   handleSearch = async () => {
     const API_URL = "https://api.github.com/users/";
 
+    try{
     /* It first checks if there is a
       search query entered by the user, and if not, it returns without doing anything.*/
     if (!this.state.searchUser) return;
@@ -64,6 +65,10 @@ class App extends React.Component {
       console.error("Error fetching repos:", repos);
       this.setState({ repos: [] });
     }
+   }catch (error) {
+    console.error(error);
+    this.setState({ repos: [] });
+   }
   };
 
   /* `setSearchUser` is a function that is used to update the `searchUser` property in the component's
