@@ -10,13 +10,14 @@ import "./../App.css";
  * the value of the input field. The button has an `onClick` event listener that calls the `handleSearch` function.
  * when it is clicked.
  */
-const SearchBar = ({ setSearchUser, handleSearch }) => {
+const SearchBar = ({ searchUser, setSearchUser, handleSearch }) => {
   return (
     <div className="search-bar">
       <h1>GitHub Profile Search</h1>
       <input
         type="text"
         placeholder="Search GitHub username..."
+        value={searchUser} // value
         onChange={(e) => setSearchUser(e.target.value)}
       />
       <button onClick={handleSearch}>Search</button>

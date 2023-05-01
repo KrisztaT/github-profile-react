@@ -17,17 +17,17 @@ const Profile = ({ user, repos }) => {
               <p> {user.followers} Followers </p>
               <p> {user.following} Following </p>
               <p> {user.public_repos} Repos </p>
-            </div>
+            </div> 
           </div>
         </div>
       )}
       <div className="repos">
         {repos.map((repo) => (
-          <a key={repo.id} href={repo.html_url}>{repo.name}, </a>
+          <a key={repo.id} href={repo.html_url}>{repo.name} </a>
         ))}
       </div>
     </div>
   );
-};
+}; 
 
 export default Profile;
