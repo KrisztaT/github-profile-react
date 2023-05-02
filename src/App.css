@@ -105,6 +105,10 @@ body{
   font-weight: 700;
 }
 
+.stats p{
+  margin-right: 12px;
+}
+
 .repos {
   color: black;
   font-size: 0.85rem;
