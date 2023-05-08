@@ -17,7 +17,7 @@ const SearchBar = ({ searchUser, setSearchUser, handleSearch }) => {
       <input
         type="text"
         placeholder="Search GitHub username..."
-        value={searchUser} // value
+        value={searchUser}
         onChange={(e) => setSearchUser(e.target.value)}
       />
       <button onClick={handleSearch}>Search</button>

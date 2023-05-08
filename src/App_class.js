@@ -1,6 +1,6 @@
 import React from "react";
-import SearchBar from "./SearchBar";
-import Profile from "./Profile";
+import SearchBar from "./components/SearchBar";
+import Profile from "./components/Profile";
 
 /* This is a React component that allows users to search for a GitHub user and displays their profile
 and repositories. */
