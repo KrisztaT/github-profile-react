@@ -20,7 +20,7 @@ const SearchBar = ({ searchUser, setSearchUser, handleSearch }) => {
         value={searchUser}
         onChange={(e) => setSearchUser(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
+       <button onClick={handleSearch}>Search</button>
     </div>
   );
 };

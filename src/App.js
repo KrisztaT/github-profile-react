@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import SearchBar from "./components/SearchBar";
 import Profile from "./components/Profile";
 
@@ -88,14 +88,6 @@ const App = () => {
       setRepos([]);
     }
   };
-
-  /* `useEffect(() => { handleSearch(); }, []);` is a hook in React that is used to run in
-  functional components. It is used to call the `handleSearch` function when the
-  component mounts for the first time. The second argument `[]` is an empty array, which means that
-  the effect will only run once when the component mounts and not on any subsequent re-renders. */
-  useEffect(() => {
-    handleSearch();
-  }, []);
 
   /* The `return` statement is returning a JSX element that contains two components: `SearchBar` and
   `Profile`. The `SearchBar` component is passed two props: `setSearchUser` and `handleSearch`,
