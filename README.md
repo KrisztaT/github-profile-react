@@ -4,7 +4,7 @@ This React application was developed by utilising my [GitHub Profile Search](htt
 
 ## Demo
 
-Check out the deployed app at https://wonderful-granita-f625d7.netlify.app/
+Check out the deployed app at https://github-profile-search-k.netlify.app/
 
 ## Features
 
